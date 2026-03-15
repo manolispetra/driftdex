@@ -1,11 +1,9 @@
 import { useState, useCallback, useEffect } from 'react'
 import { ethers } from 'ethers'
 import { DEX_ABI, TOKEN_ABI } from '../utils/abi'
+import DEPLOYMENTS_RAW from '../deployments.json'
 
-let DEPLOYMENTS = {}
-try {
-  DEPLOYMENTS = await import('../deployments.json').then(m => m.default).catch(() => ({}))
-} catch {}
+const DEPLOYMENTS = DEPLOYMENTS_RAW || {}
 
 export function useDEX(signer, account) {
   const [dex,      setDex]      = useState(null)
