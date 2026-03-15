@@ -1,0 +1,33 @@
+export const DEX_ABI = [
+  "function register(bytes32 refCode) external",
+  "function userReferralCode(address) view returns (bytes32)",
+  "function userStats(address) view returns (uint256 totalPoints, uint256 swapsCount, uint256 liquidityAdded, uint256 referralPoints, address referrer, bool registered)",
+  "function createPool(address,address) external returns (bytes32)",
+  "function getPoolId(address,address) pure returns (bytes32)",
+  "function getPoolReserves(address,address) view returns (uint256,uint256,address,address)",
+  "function getPoolCount() view returns (uint256)",
+  "function getAmountOut(address,address,uint256) view returns (uint256)",
+  "function addLiquidity(address,address,uint256,uint256,uint256,uint256) external returns (uint256)",
+  "function removeLiquidity(address,address,uint256,uint256,uint256) external returns (uint256,uint256)",
+  "function getUserShares(address,address,address) view returns (uint256)",
+  "function swap(address,address,uint256,uint256,address) external returns (uint256)",
+  "function getLeaderboard(uint256) view returns (address[],uint256[])",
+  "function getUserCount() view returns (uint256)",
+  "function currentStreak(address) view returns (uint256)",
+  "function lastActiveDay(address) view returns (uint256)",
+  "event Swapped(bytes32 indexed,address indexed,address,uint256,uint256,uint256)",
+  "event LiquidityAdded(bytes32 indexed,address indexed,uint256,uint256,uint256,uint256)",
+  "event PointsAwarded(address indexed,uint256,string)",
+  "event UserRegistered(address indexed,address indexed)",
+]
+
+export const TOKEN_ABI = [
+  "function name() view returns (string)",
+  "function symbol() view returns (string)",
+  "function decimals() view returns (uint8)",
+  "function balanceOf(address) view returns (uint256)",
+  "function approve(address,uint256) external returns (bool)",
+  "function allowance(address,address) view returns (uint256)",
+  "function faucet() external",
+  "function lastFaucetTime(address) view returns (uint256)",
+]

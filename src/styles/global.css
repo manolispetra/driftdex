@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:          #080c0f;
+  --bg1:         #0d1318;
+  --bg2:         #111920;
+  --bg3:         #19252e;
+  --bg4:         #0a1014;
+  --border:      #1e2f3a;
+  --border-hi:   #2a4050;
+  --cyan:        #00ffe0;
+  --cyan-dim:    #00bfab;
+  --cyan-dark:   #007a6b;
+  --cyan-faint:  rgba(0,255,224,0.06);
+  --amber:       #f0b90b;
+  --amber-faint: rgba(240,185,11,0.08);
+  --red:         #ff4757;
+  --green:       #00e676;
+  --text:        #e0edf5;
+  --text-dim:    #7a99a8;
+  --text-mute:   #3a5566;
+  --font-brand:  'Orbitron', monospace;
+  --font-mono:   'Space Mono', monospace;
+  --font-sans:   'Syne', sans-serif;
+  --radius:      6px;
+  --radius-lg:   10px;
+  --transition:  180ms cubic-bezier(0.4,0,0.2,1);
+  --shadow-cyan: 0 0 20px rgba(0,255,224,0.12);
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.4);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.025) 2px, rgba(0,0,0,0.025) 4px);
+  pointer-events: none; z-index: 9999;
+}
+body::after {
+  content: '';
+  position: fixed; top: -20%; left: 50%; transform: translateX(-50%);
+  width: 80vw; height: 60vh;
+  background: radial-gradient(ellipse, rgba(0,255,224,0.03) 0%, transparent 70%);
+  pointer-events: none; z-index: 0;
+}
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--cyan-dark); }
+::selection { background: rgba(0,255,224,0.18); color: var(--cyan); }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+input, select { font-family: var(--font-mono); outline: none; }
+a { color: var(--cyan); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.mono  { font-family: var(--font-mono); }
+.brand { font-family: var(--font-brand); }
+.cyan  { color: var(--cyan); }
+.dim   { color: var(--text-dim); }
+.mute  { color: var(--text-mute); }
+.green { color: var(--green); }
+.amber { color: var(--amber); }
+.red   { color: var(--red); }

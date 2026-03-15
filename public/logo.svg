@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 72" width="320" height="72">
+  <polygon points="36,4 60,4 72,24 60,44 36,44 24,24"
+    fill="rgba(0,255,224,0.07)" stroke="#00ffe0" stroke-width="1.5" stroke-linejoin="round"/>
+  <text x="48" y="24" text-anchor="middle" dominant-baseline="central"
+    font-family="Orbitron,monospace" font-size="20" font-weight="900" fill="#00ffe0">D</text>
+  <text x="90" y="20" dominant-baseline="central"
+    font-family="Orbitron,monospace" font-size="26" font-weight="900"
+    fill="#e0edf5" letter-spacing="0.12em">DRIFT</text>
+  <text x="91" y="36" dominant-baseline="central"
+    font-family="'Space Mono',monospace" font-size="7.5" font-weight="400"
+    fill="rgba(0,255,224,0.5)" letter-spacing="0.26em">INCENTIVISED DEX · BSC TESTNET</text>
+  <line x1="91" y1="46" x2="310" y2="46" stroke="rgba(0,255,224,0.12)" stroke-width="0.5"/>
+</svg>

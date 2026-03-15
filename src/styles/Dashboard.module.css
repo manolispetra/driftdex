@@ -1,0 +1,47 @@
+.card { background: var(--bg1); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); }
+.cardHeader { display: flex; align-items: center; justify-content: space-between; padding: 16px 18px 14px; border-bottom: 1px solid var(--border); background: var(--bg4); }
+.cardTitle { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-mute); }
+.addr { font-family: var(--font-mono); font-size: 11px; color: var(--cyan); }
+.inner { padding: 18px; }
+.pointsHero {
+  background: linear-gradient(135deg, rgba(0,255,224,0.07) 0%, rgba(0,191,171,0.03) 100%);
+  border: 1px solid rgba(0,255,224,0.15); border-radius: var(--radius-lg);
+  padding: 20px; text-align: center; margin-bottom: 14px; position: relative; overflow: hidden;
+}
+.pointsHero::before {
+  content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  width: 120px; height: 120px; opacity: 0.04;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5' fill='none' stroke='%2300ffe0' stroke-width='1'/%3E%3C/svg%3E") no-repeat center/contain;
+  pointer-events: none;
+}
+.pointsLabel { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-mute); margin-bottom: 8px; }
+.pointsValue { font-family: var(--font-brand); font-size: 40px; font-weight: 900; color: var(--cyan); line-height: 1; letter-spacing: -0.02em; }
+.pointsSubtext { font-size: 11px; color: var(--amber); margin-top: 8px; font-family: var(--font-mono); }
+.statGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
+.statBox { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 10px; text-align: center; }
+.statNum { font-family: var(--font-brand); font-size: 22px; font-weight: 700; color: var(--text); }
+.statLbl { font-size: 9px; color: var(--text-mute); margin-top: 3px; letter-spacing: 0.1em; text-transform: uppercase; font-family: var(--font-mono); }
+.progressSection { margin-bottom: 14px; }
+.progressLabel { display: flex; justify-content: space-between; font-size: 11px; color: var(--text-dim); margin-bottom: 7px; font-family: var(--font-mono); }
+.progressBar { height: 3px; background: var(--bg3); border-radius: 2px; overflow: hidden; }
+.progressFill { height: 100%; background: linear-gradient(90deg, var(--cyan-dark), var(--cyan)); border-radius: 2px; transition: width 0.6s cubic-bezier(0.4,0,0.2,1); }
+.progressHint { font-size: 10px; color: var(--text-mute); margin-top: 5px; font-family: var(--font-mono); }
+.balances { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 14px; }
+.balHeader { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-mute); padding: 8px 12px; background: var(--bg); border-bottom: 1px solid var(--border); }
+.balRow { display: flex; justify-content: space-between; align-items: center; padding: 9px 12px; font-size: 12px; border-bottom: 1px solid var(--border); }
+.balRow:last-child { border-bottom: none; }
+.balSym { font-family: var(--font-brand); font-size: 11px; font-weight: 700; color: var(--text-dim); letter-spacing: 0.06em; }
+.refSection { border-top: 1px solid var(--border); padding: 14px 18px; background: var(--bg4); }
+.refLabel { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-mute); margin-bottom: 8px; }
+.refBox { display: flex; align-items: center; gap: 8px; background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 8px 12px; }
+.refCodeText { flex: 1; font-family: var(--font-mono); font-size: 10px; color: var(--text-dim); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.copyBtn { background: var(--bg3); color: var(--cyan); border: 1px solid rgba(0,255,224,0.2); border-radius: 3px; padding: 4px 12px; font-size: 10px; font-family: var(--font-brand); letter-spacing: 0.08em; flex-shrink: 0; transition: all var(--transition); }
+.copyBtn:hover { background: var(--cyan); color: #000; border-color: var(--cyan); }
+.refHint { font-size: 10px; color: var(--text-mute); margin-top: 6px; font-family: var(--font-mono); }
+.connectPrompt { text-align: center; padding: 32px 16px; }
+.promptHex { display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+.connectPrompt h3 { font-family: var(--font-brand); font-size: 15px; font-weight: 700; margin-bottom: 8px; letter-spacing: 0.08em; color: var(--text); }
+.connectPrompt p { font-size: 12px; color: var(--text-dim); margin-bottom: 22px; line-height: 1.6; }
+.connectBtn { background: var(--cyan); color: #000; font-weight: 700; font-family: var(--font-brand); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; padding: 11px 28px; border-radius: var(--radius); transition: all var(--transition); }
+.connectBtn:hover { opacity: 0.85; box-shadow: var(--shadow-cyan); }
+.notRegistered { font-size: 12px; color: var(--text-dim); padding: 16px; background: var(--bg2); border-radius: var(--radius); text-align: center; line-height: 1.6; font-family: var(--font-mono); margin: 18px; }

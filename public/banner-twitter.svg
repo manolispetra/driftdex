@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500" width="1500" height="500">
+  <defs>
+    <radialGradient id="bg" cx="25%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#0d1d24"/>
+      <stop offset="100%" stop-color="#080c0f"/>
+    </radialGradient>
+  </defs>
+  <rect width="1500" height="500" fill="url(#bg)"/>
+  <!-- grid -->
+  <g stroke="rgba(0,255,224,0.035)" stroke-width="0.5">
+    <line x1="0" y1="100" x2="1500" y2="100"/>
+    <line x1="0" y1="200" x2="1500" y2="200"/>
+    <line x1="0" y1="300" x2="1500" y2="300"/>
+    <line x1="0" y1="400" x2="1500" y2="400"/>
+    <line x1="250"  y1="0" x2="250"  y2="500"/>
+    <line x1="500"  y1="0" x2="500"  y2="500"/>
+    <line x1="750"  y1="0" x2="750"  y2="500"/>
+    <line x1="1000" y1="0" x2="1000" y2="500"/>
+    <line x1="1250" y1="0" x2="1250" y2="500"/>
+  </g>
+  <!-- ambient glow -->
+  <ellipse cx="220" cy="250" rx="340" ry="230" fill="rgba(0,255,224,0.03)"/>
+  <!-- bg hex -->
+  <polygon points="750,55 925,156 925,358 750,459 575,358 575,156"
+    fill="none" stroke="rgba(0,255,224,0.035)" stroke-width="1.5"/>
+  <!-- deco hexes right -->
+  <polygon points="1310,110 1365,142 1365,206 1310,238 1255,206 1255,142"
+    fill="none" stroke="rgba(0,255,224,0.07)" stroke-width="1"/>
+  <polygon points="1380,245 1420,268 1420,314 1380,337 1340,314 1340,268"
+    fill="none" stroke="rgba(0,255,224,0.05)" stroke-width="1"/>
+  <!-- main hex mark -->
+  <polygon points="158,168 230,168 266,228 230,288 158,288 122,228"
+    fill="rgba(0,255,224,0.06)" stroke="#00ffe0" stroke-width="2" stroke-linejoin="round"/>
+  <text x="194" y="228" text-anchor="middle" dominant-baseline="central"
+    font-family="Orbitron,monospace" font-size="54" font-weight="900" fill="#00ffe0">D</text>
+  <!-- wordmark -->
+  <text x="308" y="206" dominant-baseline="central"
+    font-family="Orbitron,monospace" font-size="92" font-weight="900"
+    fill="#e0edf5" letter-spacing="0.08em">DRIFT</text>
+  <!-- rule -->
+  <line x1="308" y1="294" x2="955" y2="294" stroke="rgba(0,255,224,0.22)" stroke-width="0.8"/>
+  <!-- tagline -->
+  <text x="310" y="330" dominant-baseline="central"
+    font-family="'Space Mono',monospace" font-size="18"
+    fill="rgba(0,255,224,0.7)" letter-spacing="0.16em">SWAP · EARN POINTS · GET THE AIRDROP</text>
+  <!-- network badge -->
+  <rect x="310" y="362" width="188" height="28" rx="4"
+    fill="rgba(240,185,11,0.08)" stroke="rgba(240,185,11,0.3)" stroke-width="1"/>
+  <text x="404" y="376" text-anchor="middle" dominant-baseline="central"
+    font-family="'Space Mono',monospace" font-size="11"
+    fill="rgba(240,185,11,0.85)" letter-spacing="0.14em">BNB SMART CHAIN TESTNET</text>
+  <!-- stats row -->
+  <text x="310" y="412" dominant-baseline="central"
+    font-family="monospace" font-size="12" fill="rgba(224,237,245,0.3)" letter-spacing="0.1em">
+    CHAIN ID: 97  ·  0.30% FEE  ·  3 TRADING PAIRS  ·  DAILY STREAKS  ·  FREE tBNB FAUCETS
+  </text>
+  <!-- points pills -->
+  <g transform="translate(1048,148)">
+    <rect x="0" y="0" width="188" height="44" rx="5"
+      fill="rgba(0,255,224,0.05)" stroke="rgba(0,255,224,0.18)" stroke-width="1"/>
+    <text x="14" y="22" dominant-baseline="central"
+      font-family="monospace" font-size="10" fill="rgba(0,255,224,0.45)" letter-spacing="0.12em">SWAP</text>
+    <text x="174" y="22" text-anchor="end" dominant-baseline="central"
+      font-family="Orbitron,monospace" font-size="16" font-weight="700" fill="#00ffe0">+100 PTS</text>
+  </g>
+  <g transform="translate(1048,204)">
+    <rect x="0" y="0" width="188" height="44" rx="5"
+      fill="rgba(0,255,224,0.05)" stroke="rgba(0,255,224,0.18)" stroke-width="1"/>
+    <text x="14" y="22" dominant-baseline="central"
+      font-family="monospace" font-size="10" fill="rgba(0,255,224,0.45)" letter-spacing="0.12em">ADD LIQUIDITY</text>
+    <text x="174" y="22" text-anchor="end" dominant-baseline="central"
+      font-family="Orbitron,monospace" font-size="16" font-weight="700" fill="#00ffe0">+500 PTS</text>
+  </g>
+  <g transform="translate(1048,260)">
+    <rect x="0" y="0" width="188" height="44" rx="5"
+      fill="rgba(0,255,224,0.05)" stroke="rgba(0,255,224,0.18)" stroke-width="1"/>
+    <text x="14" y="22" dominant-baseline="central"
+      font-family="monospace" font-size="10" fill="rgba(0,255,224,0.45)" letter-spacing="0.12em">REFERRAL</text>
+    <text x="174" y="22" text-anchor="end" dominant-baseline="central"
+      font-family="Orbitron,monospace" font-size="16" font-weight="700" fill="#00ffe0">+200 PTS</text>
+  </g>
+  <g transform="translate(1048,316)">
+    <rect x="0" y="0" width="188" height="44" rx="5"
+      fill="rgba(240,185,11,0.06)" stroke="rgba(240,185,11,0.22)" stroke-width="1"/>
+    <text x="14" y="22" dominant-baseline="central"
+      font-family="monospace" font-size="10" fill="rgba(240,185,11,0.5)" letter-spacing="0.12em">7-DAY STREAK</text>
+    <text x="174" y="22" text-anchor="end" dominant-baseline="central"
+      font-family="Orbitron,monospace" font-size="16" font-weight="700" fill="#f0b90b">2× MULT</text>
+  </g>
+  <line x1="0" y1="496" x2="1500" y2="496" stroke="rgba(0,255,224,0.1)" stroke-width="1"/>
+</svg>

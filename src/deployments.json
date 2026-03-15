@@ -1,0 +1,12 @@
+{
+  "network": "bscTestnet",
+  "chainId": 97,
+  "deployer": "0x3b1a35b9EcA043EC70f6141acA5Dd4Dd27d73764",
+  "timestamp": "2026-03-15T15:54:31.504Z",
+  "contracts": {
+    "DriftDEX": "0x085FaB7aa035714790420EA13729FeaDfB650520",
+    "tWBNB": "0xbADDF5bC2e7185C07DDAe7d4879aeC4D120FEF0D",
+    "tUSDT": "0x8CFbd3b7135e92ee71142F1683b7315b4e8E4ad5",
+    "tBUSD": "0xC29505Dd89E70cf8c08fDF07e246cb6584F465ec"
+  }
+}

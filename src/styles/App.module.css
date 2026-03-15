@@ -1,0 +1,118 @@
+.app { min-height: 100vh; position: relative; }
+
+.bg {
+  position: fixed; inset: 0;
+  background:
+    radial-gradient(ellipse 90vw 55vh at 50% -5%, rgba(0,255,224,0.032), transparent),
+    radial-gradient(ellipse 45vw 45vh at 92% 85%, rgba(0,191,171,0.022), transparent),
+    radial-gradient(ellipse 30vw 30vh at 5% 60%, rgba(0,100,90,0.014), transparent);
+  pointer-events: none; z-index: 0;
+}
+.bg::after {
+  content: '';
+  position: absolute; inset: 0; opacity: 0.012;
+  background-image:
+    linear-gradient(rgba(0,255,224,1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,224,1) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.main {
+  position: relative; z-index: 1;
+  max-width: 1200px; margin: 0 auto;
+  padding: 28px 20px 100px;
+}
+
+.networkBanner {
+  background: rgba(255,71,87,0.07);
+  border: 1px solid rgba(255,71,87,0.3);
+  border-radius: var(--radius);
+  padding: 12px 20px; margin-bottom: 20px;
+  display: flex; align-items: center; gap: 16px;
+  color: var(--red); font-family: var(--font-mono); font-size: 12px;
+}
+.switchBtn {
+  background: var(--red); color: #fff;
+  padding: 6px 16px; border-radius: var(--radius);
+  font-size: 12px; font-weight: 700; font-family: var(--font-brand);
+  letter-spacing: 0.08em; text-transform: uppercase;
+  transition: opacity var(--transition);
+}
+.switchBtn:hover { opacity: 0.85; }
+
+.registerBanner {
+  background: linear-gradient(90deg, rgba(0,255,224,0.06), rgba(0,255,224,0.02));
+  border: 1px solid rgba(0,255,224,0.25);
+  border-radius: var(--radius-lg); padding: 16px 24px; margin-bottom: 24px;
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  position: relative; overflow: hidden;
+}
+.registerBanner::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+  width: 3px; background: var(--cyan);
+}
+.regTitle {
+  font-family: var(--font-brand); font-size: 11px; font-weight: 700;
+  color: var(--cyan); letter-spacing: 0.1em; flex-shrink: 0;
+}
+.regInput {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: var(--radius); color: var(--text);
+  padding: 8px 14px; font-size: 13px; flex: 1; min-width: 180px;
+  transition: border-color var(--transition);
+}
+.regInput:focus { border-color: var(--cyan-dim); }
+.regInput::placeholder { color: var(--text-mute); }
+.regBtn {
+  background: var(--cyan); color: #000; font-weight: 700;
+  font-family: var(--font-brand); font-size: 11px; letter-spacing: 0.1em;
+  padding: 9px 22px; border-radius: var(--radius); text-transform: uppercase;
+  transition: all var(--transition); white-space: nowrap; flex-shrink: 0;
+}
+.regBtn:hover:not(:disabled) { opacity: 0.88; box-shadow: var(--shadow-cyan); }
+.regBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.layout {
+  display: grid; grid-template-columns: 1fr 316px;
+  gap: 20px; align-items: start;
+}
+@media (max-width: 920px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { order: -1; }
+}
+
+.panels {
+  background: var(--bg1); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.tabs { display: flex; border-bottom: 1px solid var(--border); background: var(--bg4); }
+.tab {
+  flex: 1; padding: 15px 8px;
+  font-family: var(--font-mono); font-size: 11px;
+  color: var(--text-mute); letter-spacing: 0.1em; text-transform: uppercase;
+  transition: all var(--transition); border-bottom: 2px solid transparent;
+}
+.tab:hover { color: var(--text-dim); }
+.tabActive { color: var(--cyan); border-bottom-color: var(--cyan); background: rgba(0,255,224,0.03); }
+
+.panelContent { padding: 28px 24px; }
+
+.sidebar { position: sticky; top: 86px; }
+
+.txToast {
+  position: fixed; bottom: 28px; right: 28px;
+  background: var(--bg2); border: 1px solid var(--green);
+  border-radius: var(--radius-lg); padding: 12px 20px;
+  display: flex; align-items: center; gap: 14px;
+  font-family: var(--font-mono); font-size: 12px; color: var(--green);
+  z-index: 1000; box-shadow: 0 4px 24px rgba(0,230,118,0.1);
+  animation: slideUp 0.3s cubic-bezier(0.34,1.56,0.64,1);
+}
+.txToast::before { content: '✓'; font-size: 14px; }
+.txToast a { color: var(--cyan); font-size: 11px; }
+@keyframes slideUp {
+  from { transform: translateY(24px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
